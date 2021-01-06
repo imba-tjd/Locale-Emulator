@@ -21,16 +21,6 @@ namespace LEProc
         {
             SystemHelper.DisableDPIScale();
 
-            try
-            {
-                Process.Start(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location),
-                        "LEUpdater.exe"),
-                    "schedule");
-            }
-            catch
-            {
-            }
-
             if (!GlobalHelper.CheckCoreDLLs())
             {
                 MessageBox.Show(
