@@ -82,8 +82,8 @@ namespace LEInstaller
                 buttonInstall.Enabled = false;
             }
 
-            DeleteOldFiles();
-            ReplaceDll();
+            // DeleteOldFiles();
+            // ReplaceDll();
 
             AddShieldToButton(buttonInstallAllUsers);
             AddShieldToButton(buttonUninstallAllUsers);
@@ -227,9 +227,9 @@ namespace LEInstaller
                 if (!allUsers)
                     OverrideHKCR();
 
-                var rs = new RegistrationServices();
-                rs.RegisterAssembly(Assembly.LoadFrom(Path.Combine(crtDir, @"LEContextMenuHandler.dll")),
-                    AssemblyRegistrationFlags.SetCodeBase);
+                // var rs = new RegistrationServices();
+                // rs.RegisterAssembly(Assembly.LoadFrom(Path.Combine(crtDir, @"LEContextMenuHandler.dll")),
+                //     AssemblyRegistrationFlags.SetCodeBase);
 
                 ShellExtensionManager.RegisterShellExtContextMenuHandler(allUsers);
 
@@ -249,8 +249,8 @@ namespace LEInstaller
                 if (!allUsers)
                     OverrideHKCR();
 
-                var rs = new RegistrationServices();
-                rs.UnregisterAssembly(Assembly.LoadFrom(Path.Combine(crtDir, @"LEContextMenuHandler.dll")));
+                // var rs = new RegistrationServices();
+                // rs.UnregisterAssembly(Assembly.LoadFrom(Path.Combine(crtDir, @"LEContextMenuHandler.dll")));
 
                 ShellExtensionManager.UnregisterShellExtContextMenuHandler(allUsers);
 
