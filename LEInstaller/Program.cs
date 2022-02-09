@@ -13,6 +13,7 @@ namespace LEInstaller
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Form1 form1=null;
             if (args.Length == 1)
             {
@@ -26,10 +27,6 @@ namespace LEInstaller
             else
                 form1 = new Form1();
             Application.Run(form1);
-
-            
-
-            
         }
     }
 }
