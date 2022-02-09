@@ -9,7 +9,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\LECommonLibrary\LECommonLibrary.csproj" />
-    <PackageReference Include="Core.System.Configuration.Install" Version="1.*" />
   </ItemGroup>
 
   <ItemGroup>
